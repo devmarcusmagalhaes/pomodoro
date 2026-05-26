@@ -1,0 +1,29 @@
+name: mini_pomodoro
+description: Mini Pomodoro com autenticação e persistência local (Hive + SharedPreferences).
+version: 2.0.0+2
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.2
+
+  # ── Parte 2: banco de dados local NoSQL ────────────────────────────────────
+  hive_flutter: ^1.1.0
+
+  # ── Parte 2: hash SHA-256 para senhas ──────────────────────────────────────
+  crypto: ^3.0.3
+
+  # ── Parte 2: persistência de sessão ativa e preferências leves ─────────────
+  shared_preferences: ^2.3.2
+
+flutter:
+  uses-material-design: true
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
