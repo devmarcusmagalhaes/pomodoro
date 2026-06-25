@@ -1,0 +1,44 @@
+name: mini_pomodoro
+description: Mini Pomodoro com autenticação e persistência local (Hive + SharedPreferences).
+version: 2.0.0+2
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.2
+
+  # ── Parte 2: banco de dados local NoSQL ────────────────────────────────────
+  hive_flutter: ^1.1.0
+
+  # ── Parte 2: hash SHA-256 para senhas ──────────────────────────────────────
+  crypto: ^3.0.3
+
+  # ── Parte 2: persistência de sessão ativa e preferências leves ─────────────
+  shared_preferences: ^2.3.2
+
+  # ── Parte 3: API Web (HTTP) ────────────────────────────────────────────────
+  http: ^1.2.2              # consumo de APIs REST (Nominatim, ZenQuotes)
+
+  # ── Parte 3: recurso nativo — GPS ──────────────────────────────────────────
+  geolocator: ^13.0.2      # acesso ao GPS do dispositivo
+
+  # ── Parte 3: mapa interativo (tiles OpenStreetMap, sem chave) ──────────────
+  flutter_map: ^7.0.2      # widget de mapa
+  latlong2: ^0.9.1         # tipo LatLng usado pelo flutter_map
+
+  # ── Parte 3: Firebase (autenticação + banco de dados na nuvem) ─────────────
+  firebase_core: ^3.8.0    # inicialização do Firebase
+  firebase_auth: ^5.3.4    # autenticação de usuários na nuvem
+  cloud_firestore: ^5.5.1  # banco de dados NoSQL na nuvem (offline-first)
+
+flutter:
+  uses-material-design: true
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
